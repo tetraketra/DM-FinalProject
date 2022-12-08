@@ -20,7 +20,7 @@
       <Properties>
         <Configuration>
           <Caption>SOURCE</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Style TextColor="#314c4a" FillColor="#ffffff" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="False" />
           <Folded value="False" />
         </Configuration>
@@ -102,7 +102,7 @@
     </Node>
     <Node ToolID="68">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1312" y="484" width="444" height="269" />
+        <Position x="1408" y="484" width="544" height="269" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -120,7 +120,7 @@
       <ChildNodes>
         <Node ToolID="65">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1337" y="533" width="261" height="195" />
+            <Position x="1433" y="533" width="289" height="195" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -138,7 +138,7 @@
           <ChildNodes>
             <Node ToolID="62">
               <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-                <Position x="1362" y="582" />
+                <Position x="1458" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -195,13 +195,13 @@
             </Node>
             <Node ToolID="63">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-                <Position x="1422" y="582" />
+                <Position x="1518" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
                   <UniqueFields>
-                    <Field field="PropertyClass" />
                     <Field field="GenericUse" />
+                    <Field field="PropertyClass" />
                   </UniqueFields>
                 </Configuration>
                 <Annotation DisplayMode="0">
@@ -215,8 +215,8 @@
                     <Field name="PropertyClass" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
                   </RecordInfo>
                   <SortInfo>
-                    <Field field="PropertyClass" order="Asc" />
                     <Field field="GenericUse" order="Asc" />
+                    <Field field="PropertyClass" order="Asc" />
                   </SortInfo>
                 </MetaInfo>
                 <MetaInfo connection="Duplicates">
@@ -225,8 +225,8 @@
                     <Field name="PropertyClass" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
                   </RecordInfo>
                   <SortInfo>
-                    <Field field="PropertyClass" order="Asc" />
                     <Field field="GenericUse" order="Asc" />
+                    <Field field="PropertyClass" order="Asc" />
                   </SortInfo>
                 </MetaInfo>
               </Properties>
@@ -234,7 +234,7 @@
             </Node>
             <Node ToolID="64">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-                <Position x="1482" y="582" />
+                <Position x="1578" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -258,11 +258,41 @@ PropertyClass - Ascending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
             </Node>
+            <Node ToolID="74">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+                <Position x="1638" y="582" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FieldName>UseKey</FieldName>
+                  <StartValue>1</StartValue>
+                  <FieldType>Int32</FieldType>
+                  <FieldSize>6</FieldSize>
+                  <Position>0</Position>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="UseKey" source="RecordID: Starting Value=1" type="Int32" />
+                    <Field name="GenericUse" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                    <Field name="PropertyClass" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="UseKey" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+            </Node>
           </ChildNodes>
         </Node>
         <Node ToolID="67">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1613" y="533" width="118" height="133" />
+            <Position x="1733" y="533" width="194" height="165" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -280,26 +310,64 @@ PropertyClass - Ascending</DefaultAnnotationText>
           <ChildNodes>
             <Node ToolID="66">
               <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-                <Position x="1638" y="582" />
+                <Position x="1818" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <File FileFormat="19" MaxRecords="" />
-                  <Passwords />
+                  <File MaxRecords="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||PROPERTY_USE</File>
+                  <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
                   <FormatSpecificOptions>
-                    <NoSpatialIndex>False</NoSpatialIndex>
-                    <SaveSource>True</SaveSource>
-                    <WriteCompatibleVersion>False</WriteCompatibleVersion>
+                    <TransactionSize>10000</TransactionSize>
+                    <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                    <PostSQL />
+                    <SpatialObjSize>8000</SpatialObjSize>
+                    <TableStyle>Quoted</TableStyle>
+                    <PreSQL />
+                    <TransactionMessages>False</TransactionMessages>
+                    <OutputOption>Delete</OutputOption>
                   </FormatSpecificOptions>
                   <MultiFile value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>DSN=MySQL80
+Query=PROPERTY_USE</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+            </Node>
+            <Node ToolID="73">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="1758" y="582" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="GenericUse" selected="True" type="V_String" forced="True" size="65" />
+                    <SelectField field="PropertyClass" selected="True" type="V_String" forced="True" size="255" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
                   <DefaultAnnotationText />
                   <Left value="False" />
                 </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="UseKey" source="RecordID: Starting Value=1" type="Int32" />
+                    <Field name="GenericUse" size="65" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                    <Field name="PropertyClass" size="255" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="UseKey" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
               </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
             </Node>
           </ChildNodes>
         </Node>
@@ -307,7 +375,7 @@ PropertyClass - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="58">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="772" y="484" width="528" height="299" />
+        <Position x="820" y="484" width="579" height="299" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -325,7 +393,7 @@ PropertyClass - Ascending</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="57">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="797" y="533" width="349" height="225" />
+            <Position x="845" y="533" width="349" height="225" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -343,7 +411,7 @@ PropertyClass - Ascending</DefaultAnnotationText>
           <ChildNodes>
             <Node ToolID="53">
               <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-                <Position x="822" y="582" />
+                <Position x="870" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -371,7 +439,7 @@ PropertyClass - Ascending</DefaultAnnotationText>
             </Node>
             <Node ToolID="54">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="882" y="582" />
+                <Position x="930" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -398,7 +466,7 @@ SquareFootage = Round([SquareFootage], 1000)
             </Node>
             <Node ToolID="59">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-                <Position x="942" y="582" />
+                <Position x="990" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -437,7 +505,7 @@ SquareFootage = Round([SquareFootage], 1000)
             </Node>
             <Node ToolID="60">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-                <Position x="1002" y="582" />
+                <Position x="1050" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -463,7 +531,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
             </Node>
             <Node ToolID="61">
               <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-                <Position x="1062" y="582" />
+                <Position x="1110" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -495,7 +563,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="56">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1157" y="533" width="118" height="133" />
+            <Position x="1205" y="533" width="169" height="133" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -513,26 +581,62 @@ SquareFootage - Ascending</DefaultAnnotationText>
           <ChildNodes>
             <Node ToolID="55">
               <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-                <Position x="1182" y="582" />
+                <Position x="1290" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <File FileFormat="19" MaxRecords="" />
-                  <Passwords />
+                  <File MaxRecords="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||PROPERTY_SIZE</File>
+                  <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
                   <FormatSpecificOptions>
-                    <NoSpatialIndex>False</NoSpatialIndex>
-                    <SaveSource>True</SaveSource>
-                    <WriteCompatibleVersion>False</WriteCompatibleVersion>
+                    <TransactionSize>10000</TransactionSize>
+                    <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                    <PostSQL />
+                    <SpatialObjSize>8000</SpatialObjSize>
+                    <TableStyle>Quoted</TableStyle>
+                    <PreSQL />
+                    <TransactionMessages>False</TransactionMessages>
+                    <OutputOption>Delete</OutputOption>
                   </FormatSpecificOptions>
                   <MultiFile value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>DSN=MySQL80
+Query=PROPERTY_SIZE</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+            </Node>
+            <Node ToolID="72">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="1230" y="582" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
                   <DefaultAnnotationText />
                   <Left value="False" />
                 </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="SizeKey" source="RecordID: Starting Value=1" type="Int32" />
+                    <Field name="Acreage" source="Formula: Round([Acreage], 0.1)" type="Float" />
+                    <Field name="SquareFootage" source="Formula: Round([SquareFootage], 1000)" type="Int32" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="SizeKey" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
               </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
             </Node>
           </ChildNodes>
         </Node>
@@ -540,7 +644,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="52">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="232" y="484" width="528" height="326" />
+        <Position x="232" y="484" width="579" height="326" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -756,7 +860,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="51">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="617" y="533" width="118" height="133" />
+            <Position x="617" y="533" width="169" height="133" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -774,26 +878,66 @@ SquareFootage - Ascending</DefaultAnnotationText>
           <ChildNodes>
             <Node ToolID="50">
               <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+                <Position x="702" y="582" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <File MaxRecords="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||PROPERTY_LOCATION</File>
+                  <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+                  <FormatSpecificOptions>
+                    <TransactionSize>10000</TransactionSize>
+                    <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                    <PostSQL />
+                    <SpatialObjSize>8000</SpatialObjSize>
+                    <TableStyle>Quoted</TableStyle>
+                    <PreSQL />
+                    <TransactionMessages>False</TransactionMessages>
+                    <OutputOption>Delete</OutputOption>
+                  </FormatSpecificOptions>
+                  <MultiFile value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>DSN=MySQL80
+Query=PROPERTY_LOCATION</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+            </Node>
+            <Node ToolID="71">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
                 <Position x="642" y="582" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <File FileFormat="19" MaxRecords="" />
-                  <Passwords />
-                  <FormatSpecificOptions>
-                    <NoSpatialIndex>False</NoSpatialIndex>
-                    <SaveSource>True</SaveSource>
-                    <WriteCompatibleVersion>False</WriteCompatibleVersion>
-                  </FormatSpecificOptions>
-                  <MultiFile value="False" />
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="LocationKey" selected="True" />
+                    <SelectField field="property_state" selected="True" rename="State" />
+                    <SelectField field="property_city" selected="True" rename="City" type="V_String" forced="True" size="64" />
+                    <SelectField field="property_street_name" selected="True" rename="Street" type="V_String" forced="True" size="255" />
+                    <SelectField field="property_zip" selected="True" rename="ZIP5" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
                   <DefaultAnnotationText />
                   <Left value="False" />
                 </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="LocationKey" source="RecordID: Starting Value=1" type="Int32" />
+                    <Field name="State" size="2" source="Formula: &quot;VA&quot;" type="V_WString" />
+                    <Field name="City" size="64" source="Formula: Replace(Replace([property_city], &quot; &quot;, &quot;&quot;), &quot;&quot;, &quot;Unknown&quot;)" type="V_String" />
+                    <Field name="Street" size="255" source="Formula: Trim([property_street_name],&quot; &quot;)" type="V_String" />
+                    <Field name="ZIP5" source="Formula: ToNumber(Replace(Replace(Left([property_zip], FindString([property_zip], &quot;-&quot;)), &quot; &quot;, &quot;&quot;), &quot;&quot;, &quot;0&quot;))" type="Int32" />
+                  </RecordInfo>
+                </MetaInfo>
               </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
             </Node>
           </ChildNodes>
         </Node>
@@ -801,7 +945,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="232" y="112" width="1152" height="362" />
+        <Position x="232" y="112" width="1237" height="362" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -872,17 +1016,17 @@ SquareFootage - Ascending</DefaultAnnotationText>
               <Properties>
                 <Configuration>
                   <FormulaFields>
-                    <FormulaField expression="if [ImprovementYear] == '' then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" field="ImprovementYear" size="254" type="WString" />
+                    <FormulaField expression="if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" field="ImprovementYear" size="254" type="WString" />
                   </FormulaFields>
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
-                  <DefaultAnnotationText>ImprovementYear = if [ImprovementYear] == '' then [ImprovementYear] + "-01-01" e...</DefaultAnnotationText>
+                  <DefaultAnnotationText>ImprovementYear = if [ImprovementYear] != '' and [ImprovementYear] != Null() the...</DefaultAnnotationText>
                   <Left value="False" />
                 </Annotation>
                 <MetaInfo connection="Output">
                   <RecordInfo>
-                    <Field name="ImprovementYear" size="254" source="Formula: if [ImprovementYear] == '' then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="WString" />
+                    <Field name="ImprovementYear" size="254" source="Formula: if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="WString" />
                     <Field name="AssessmentYear" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="Date" />
                     <Field name="TransferDate" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="Date" />
                   </RecordInfo>
@@ -910,7 +1054,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
                 </Annotation>
                 <MetaInfo connection="Output">
                   <RecordInfo>
-                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] == '' then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
+                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
                     <Field name="AssessmentYear" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="Date" />
                     <Field name="TransferDate" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="Date" />
                   </RecordInfo>
@@ -986,7 +1130,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
                 </Annotation>
                 <MetaInfo connection="Output">
                   <RecordInfo>
-                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] == '' then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
+                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
                   </RecordInfo>
                 </MetaInfo>
               </Properties>
@@ -1036,7 +1180,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
                 </Annotation>
                 <MetaInfo connection="Unique">
                   <RecordInfo>
-                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] == '' then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
+                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
                   </RecordInfo>
                   <SortInfo>
                     <Field field="ImprovementYear" order="Asc" />
@@ -1044,7 +1188,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
                 </MetaInfo>
                 <MetaInfo connection="Duplicates">
                   <RecordInfo>
-                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] == '' then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
+                    <Field name="ImprovementYear" source="Formula: if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" />
                   </RecordInfo>
                   <SortInfo>
                     <Field field="ImprovementYear" order="Asc" />
@@ -1136,7 +1280,7 @@ SquareFootage - Ascending</DefaultAnnotationText>
                     </MetaInfo>
                     <MetaInfo name="#2">
                       <RecordInfo>
-                        <Field name="ImprovementYear" source="Formula: [ImprovementYear] + &quot;-01-01&quot;" type="Date" column="1" />
+                        <Field name="ImprovementYear" source="Formula: if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" type="Date" column="1" />
                       </RecordInfo>
                     </MetaInfo>
                     <MetaInfo name="#3">
@@ -1370,7 +1514,7 @@ Quarter = Ceil(ToNumber(DateTimeFormat([FullDate...</DefaultAnnotationText>
         </Node>
         <Node ToolID="39">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1241" y="209" width="118" height="133" />
+            <Position x="1241" y="209" width="203" height="165" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1388,26 +1532,68 @@ Quarter = Ceil(ToNumber(DateTimeFormat([FullDate...</DefaultAnnotationText>
           <ChildNodes>
             <Node ToolID="38">
               <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+                <Position x="1326" y="258" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <File MaxRecords="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||DATE</File>
+                  <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+                  <FormatSpecificOptions>
+                    <TransactionSize>10000</TransactionSize>
+                    <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                    <PostSQL />
+                    <SpatialObjSize>8000</SpatialObjSize>
+                    <TableStyle>Quoted</TableStyle>
+                    <AppendMap>
+                      <AppendMapping mode="ByName" />
+                    </AppendMap>
+                    <PreSQL />
+                    <TransactionMessages>False</TransactionMessages>
+                    <OutputOption>Delete</OutputOption>
+                  </FormatSpecificOptions>
+                  <MultiFile value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>DSN=MySQL80
+Query=DATE</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+            </Node>
+            <Node ToolID="70">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
                 <Position x="1266" y="258" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <File FileFormat="19" MaxRecords="" />
-                  <Passwords />
-                  <FormatSpecificOptions>
-                    <NoSpatialIndex>False</NoSpatialIndex>
-                    <SaveSource>True</SaveSource>
-                    <WriteCompatibleVersion>False</WriteCompatibleVersion>
-                  </FormatSpecificOptions>
-                  <MultiFile value="False" />
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
                   <DefaultAnnotationText />
                   <Left value="False" />
                 </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="DateKey" source="RecordID: Starting Value=1" type="Int16" />
+                    <Field name="FullDate" source="(Multiple Sources) (BatchMacro) (BatchMacro) (BatchMacro)" type="Date" />
+                    <Field name="Year" source="Formula: DateTimeYear([FullDate])" type="Int16" />
+                    <Field name="Quarter" source="Formula: Ceil(ToNumber(DateTimeFormat([FullDate],'%m'))/3)" type="Int16" />
+                    <Field name="Month" source="Formula: DateTimeMonth([FullDate])" type="Int16" />
+                    <Field name="Day" source="Formula: DateTimeDay([FullDate])" type="Int16" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="DateKey" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
               </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
             </Node>
           </ChildNodes>
         </Node>
@@ -1440,6 +1626,18 @@ Quarter = Ceil(ToNumber(DateTimeFormat([FullDate...</DefaultAnnotationText>
       <Destination ToolID="64" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="53" Connection="Output" />
       <Destination ToolID="54" Connection="Input" />
     </Connection>
@@ -1456,6 +1654,14 @@ Quarter = Ceil(ToNumber(DateTimeFormat([FullDate...</DefaultAnnotationText>
       <Destination ToolID="61" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="40" Connection="Output" />
       <Destination ToolID="42" Connection="Input" />
     </Connection>
@@ -1470,6 +1676,14 @@ Quarter = Ceil(ToNumber(DateTimeFormat([FullDate...</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="47" Connection="Output" />
       <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="9" Connection="Output" />
@@ -1538,6 +1752,14 @@ Quarter = Ceil(ToNumber(DateTimeFormat([FullDate...</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="30" Connection="Output" />
       <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

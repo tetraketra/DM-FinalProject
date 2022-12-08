@@ -1,0 +1,958 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1494" y="102" width="204" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>18 records lost to duplicate ParcelID!</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="6" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1493" y="149" width="151" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Export</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1518" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||PROPERTY_VALUE</File>
+              <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+              <FormatSpecificOptions>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Delete</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=MySQL80
+Query=PROPERTY_VALUE</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="0" y="101" width="152" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SOURCE</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="25" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">PropertyAssessmentAndSales_FY23.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>PropertyAssessmentAndSales_FY23.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="lrsn" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="parcel_id" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="extension" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="gpin" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="legal_description" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="owner" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_street_number" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_street_number_suffix" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_street_direction" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_street_name" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_street_type" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_street_suffix" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="unit_number" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_city" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_zip" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="acreage" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="square_feet" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_class_description" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="property_use" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="finished_living_area" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="commercial_building_area" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="dwelling_year_built" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="current_improvement_value" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="current_land_value" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="current_total_value" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="effective_year" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="transfer_date" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="grantor" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="grantee" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="consideration" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+                <Field name="document_number" size="254" source="File: C:\Users\Ben Silverberg\Desktop\School\3_DatabaseManagement\DM-FinalProject\PropertyAssessmentAndSales_FY23.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1289" y="113" width="193" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SIZE Vals -&gt; Key</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="1314" y="162" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+              <File RecordLimit="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_size.* 
+from property_size</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <ReadCentroids>False</ReadCentroids>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <NoProgress>True</NoProgress>
+                <SessionReadOnly>True</SessionReadOnly>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=MySQL80
+Query=select property_size.* 
+fro...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="PrimaryKey" name="SizeKey" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_size.* &#xA;from property_size" type="Int32" />
+                <Field name="Acreage" scale="2" size="12" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_size.* &#xA;from property_size" type="FixedDecimal" />
+                <Field name="SquareFootage" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_size.* &#xA;from property_size" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1398" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Acreage" />
+                <Field field="SquareFootage" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="acreage" />
+                <Field field="square_feet" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_ParcelID" selected="True" input="Right_" />
+                    <SelectField field="Right_TransferDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_AssessmentDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_ImprovementDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_UseKey" selected="True" input="Right_" />
+                    <SelectField field="Left_SizeKey" selected="True" input="Left_" />
+                    <SelectField field="Right_LocationKey" selected="True" input="Right_" />
+                    <SelectField field="Right_current_total_value" selected="True" rename="TotalValue" input="Right_" />
+                    <SelectField field="Right_current_land_value" selected="True" rename="LandValue" input="Right_" />
+                    <SelectField field="Right_current_improvement_value" selected="True" rename="ImprovementValue" input="Right_" />
+                    <SelectField field="Right_consideration" selected="True" rename="RecentSaleValue" input="Right_" />
+                    <SelectField field="Left_Acreage" selected="False" input="Left_" />
+                    <SelectField field="Left_SquareFootage" selected="False" input="Left_" />
+                    <SelectField field="Right_acreage" selected="False" rename="Right_acreage" input="Right_" type="Double" size="8" />
+                    <SelectField field="Right_square_feet" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1085" y="125" width="193" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>USE Vals -&gt; Key</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="1110" y="174" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+              <File RecordLimit="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_use.* 
+from property_use</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <ReadCentroids>False</ReadCentroids>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <NoProgress>True</NoProgress>
+                <SessionReadOnly>True</SessionReadOnly>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=MySQL80
+Query=select property_use.* 
+from...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="PrimaryKey" name="UseKey" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_use.* &#xA;from property_use" type="Int32" />
+                <Field name="GenericUse" size="65" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_use.* &#xA;from property_use" type="V_String" />
+                <Field name="PropertyClass" size="255" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_use.* &#xA;from property_use" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1194" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="GenericUse" />
+                <Field field="PropertyClass" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="property_use" />
+                <Field field="property_class_description" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_GenericUse" selected="False" input="Left_" />
+                    <SelectField field="Left_PropertyClass" selected="False" input="Left_" />
+                    <SelectField field="Right_ParcelID" selected="True" input="Right_" />
+                    <SelectField field="Right_LocationKey" selected="True" input="Right_" />
+                    <SelectField field="Left_UseKey" selected="True" input="Left_" />
+                    <SelectField field="Right_acreage" selected="True" input="Right_" />
+                    <SelectField field="Right_square_feet" selected="True" input="Right_" />
+                    <SelectField field="Right_property_class_description" selected="False" input="Right_" />
+                    <SelectField field="Right_property_use" selected="False" input="Right_" />
+                    <SelectField field="Right_current_improvement_value" selected="True" input="Right_" />
+                    <SelectField field="Right_current_land_value" selected="True" input="Right_" />
+                    <SelectField field="Right_current_total_value" selected="True" input="Right_" />
+                    <SelectField field="Right_TransferDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_AssessmentDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_ImprovementDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_consideration" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="869" y="137" width="206" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>LOCATION Vals -&gt; Key</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="894" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+              <File RecordLimit="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_location.* 
+from property_location</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <ReadCentroids>False</ReadCentroids>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <NoProgress>True</NoProgress>
+                <SessionReadOnly>True</SessionReadOnly>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=MySQL80
+Query=select property_location.* ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="PrimaryKey" name="LocationKey" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_location.* &#xA;from property_location" type="Int32" />
+                <Field name="State" size="2" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_location.* &#xA;from property_location" type="V_String" />
+                <Field name="City" size="64" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_location.* &#xA;from property_location" type="V_String" />
+                <Field name="Street" size="255" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_location.* &#xA;from property_location" type="V_String" />
+                <Field name="ZIP5" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select property_location.* &#xA;from property_location" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="978" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="State" />
+                <Field field="City" />
+                <Field field="Street" />
+                <Field field="ZIP5" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="property_state" />
+                <Field field="property_city" />
+                <Field field="property_street_name" />
+                <Field field="property_zip" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_State" selected="False" input="Left_" />
+                    <SelectField field="Left_City" selected="False" input="Left_" />
+                    <SelectField field="Left_Street" selected="False" input="Left_" />
+                    <SelectField field="Left_ZIP5" selected="False" input="Left_" />
+                    <SelectField field="Right_ParcelID" selected="True" input="Right_" />
+                    <SelectField field="Left_LocationKey" selected="True" input="Left_" />
+                    <SelectField field="Right_property_street_name" selected="False" input="Right_" />
+                    <SelectField field="Right_property_city" selected="False" input="Right_" />
+                    <SelectField field="Right_property_zip" selected="False" input="Right_" />
+                    <SelectField field="Right_acreage" selected="True" input="Right_" />
+                    <SelectField field="Right_square_feet" selected="True" input="Right_" />
+                    <SelectField field="Right_property_class_description" selected="True" input="Right_" />
+                    <SelectField field="Right_property_use" selected="True" input="Right_" />
+                    <SelectField field="Right_current_improvement_value" selected="True" input="Right_" />
+                    <SelectField field="Right_current_land_value" selected="True" input="Right_" />
+                    <SelectField field="Right_current_total_value" selected="True" input="Right_" />
+                    <SelectField field="Right_property_state" selected="False" input="Right_" />
+                    <SelectField field="Right_TransferDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_AssessmentDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_ImprovementDateKey" selected="True" input="Right_" />
+                    <SelectField field="Right_consideration" selected="True" input="Right_" />
+                    <SelectField field="Right_ImprovementYear" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="401" y="113" width="457" height="243" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>DATE Vals -&gt; Key</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="498" y="162" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="transfer_date" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="FullDate" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_transfer_date" selected="False" input="Left_" />
+                    <SelectField field="Right_DateKey" selected="True" rename="TransferDateKey" input="Right_" />
+                    <SelectField field="Right_FullDate" selected="False" input="Right_" />
+                    <SelectField field="Right_Year" selected="False" input="Right_" />
+                    <SelectField field="Right_Quarter" selected="False" input="Right_" />
+                    <SelectField field="Right_Month" selected="False" input="Right_" />
+                    <SelectField field="Right_Day" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="426" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords>4F9672E75EC46F427390D59869C872A2969D307A55A51791F</Passwords>
+              <File RecordLimit="" FileFormat="23">odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* 
+from date</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <ReadCentroids>False</ReadCentroids>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <NoProgress>True</NoProgress>
+                <SessionReadOnly>True</SessionReadOnly>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=MySQL80
+Query=select date.* 
+from date</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="PrimaryKey" name="DateKey" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* &#xA;from date" type="Int32" />
+                <Field name="FullDate" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* &#xA;from date" type="Date" />
+                <Field name="Year" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* &#xA;from date" type="Int32" />
+                <Field name="Quarter" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* &#xA;from date" type="Int32" />
+                <Field name="Month" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* &#xA;from date" type="Int32" />
+                <Field name="Day" source="File: odbc:DSN=MySQL80;UID=root;PWD=__EncPwd1__|||select date.* &#xA;from date" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="570" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="effective_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="FullDate" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_ParcelID" selected="True" input="Left_" />
+                    <SelectField field="Left_property_street_name" selected="True" input="Left_" />
+                    <SelectField field="Left_property_city" selected="True" input="Left_" />
+                    <SelectField field="Left_property_zip" selected="True" input="Left_" />
+                    <SelectField field="Left_acreage" selected="True" input="Left_" />
+                    <SelectField field="Left_square_feet" selected="True" input="Left_" />
+                    <SelectField field="Left_property_class_description" selected="True" input="Left_" />
+                    <SelectField field="Left_property_use" selected="True" input="Left_" />
+                    <SelectField field="Left_current_improvement_value" selected="True" input="Left_" />
+                    <SelectField field="Left_current_land_value" selected="True" input="Left_" />
+                    <SelectField field="Left_current_total_value" selected="True" input="Left_" />
+                    <SelectField field="Left_ImprovementYear" selected="True" input="Left_" />
+                    <SelectField field="Left_consideration" selected="True" input="Left_" />
+                    <SelectField field="Left_property_state" selected="True" input="Left_" />
+                    <SelectField field="Right_DateKey" selected="True" rename="AssessmentDateKey" input="Right_" />
+                    <SelectField field="Left_TransferDateKey" selected="True" input="Left_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="642" y="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="ImprovementYear" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="FullDate" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_ImprovementYear" selected="False" input="Left_" />
+                    <SelectField field="Right_DateKey" selected="True" rename="ImprovementDateKey" input="Right_" />
+                    <SelectField field="Right_FullDate" selected="False" input="Right_" />
+                    <SelectField field="Right_Year" selected="False" input="Right_" />
+                    <SelectField field="Right_Quarter" selected="False" input="Right_" />
+                    <SelectField field="Right_Month" selected="False" input="Right_" />
+                    <SelectField field="Right_Day" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="714" y="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="774" y="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ImprovementYear" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="161" y="101" width="229" height="225" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Format</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="186" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="lrsn" selected="False" />
+                <SelectField field="parcel_id" selected="True" rename="ParcelID" />
+                <SelectField field="extension" selected="False" />
+                <SelectField field="gpin" selected="False" />
+                <SelectField field="legal_description" selected="False" />
+                <SelectField field="owner" selected="False" />
+                <SelectField field="property_street_number" selected="False" />
+                <SelectField field="property_street_number_suffix" selected="False" />
+                <SelectField field="property_street_direction" selected="False" />
+                <SelectField field="property_street_name" selected="True" />
+                <SelectField field="property_street_type" selected="False" />
+                <SelectField field="property_street_suffix" selected="False" />
+                <SelectField field="unit_number" selected="False" />
+                <SelectField field="property_city" selected="True" />
+                <SelectField field="property_zip" selected="True" />
+                <SelectField field="acreage" selected="True" />
+                <SelectField field="square_feet" selected="True" />
+                <SelectField field="property_class_description" selected="True" />
+                <SelectField field="property_use" selected="True" />
+                <SelectField field="finished_living_area" selected="False" />
+                <SelectField field="commercial_building_area" selected="False" />
+                <SelectField field="current_improvement_value" selected="True" />
+                <SelectField field="current_land_value" selected="True" />
+                <SelectField field="current_total_value" selected="True" />
+                <SelectField field="effective_year" selected="True" />
+                <SelectField field="transfer_date" selected="True" />
+                <SelectField field="dwelling_year_built" selected="True" rename="ImprovementYear" />
+                <SelectField field="grantor" selected="False" />
+                <SelectField field="grantee" selected="False" />
+                <SelectField field="consideration" selected="True" />
+                <SelectField field="document_number" selected="False" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="246" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if [ImprovementYear] != '' and [ImprovementYear] != Null() then [ImprovementYear] + &quot;-01-01&quot; else Null() endif" field="ImprovementYear" size="254" type="V_String" />
+                <FormulaField expression="ToNumber(Replace(Replace(Left([property_zip], FindString([property_zip], &quot;-&quot;)), &quot; &quot;, &quot;&quot;), &quot;&quot;, &quot;0&quot;))" field="property_zip" size="254" type="V_String" />
+                <FormulaField expression="Replace(Replace([property_city], &quot; &quot;, &quot;&quot;), &quot;&quot;, &quot;Unknown&quot;)" field="property_city" size="254" type="V_String" />
+                <FormulaField expression="Trim([property_street_name],&quot; &quot;)" field="property_street_name" size="254" type="V_String" />
+                <FormulaField expression="&quot;VA&quot;" field="property_state" size="1073741823" type="V_WString" />
+                <FormulaField expression="Round(ToNumber([acreage]), 0.1)" field="acreage" size="254" type="V_String" />
+                <FormulaField expression="Round(ToNumber([square_feet]), 1000)" field="square_feet" size="254" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ImprovementYear = if [ImprovementYear] != '' and [ImprovementYear] != Null() the...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="306" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="property_zip" selected="True" type="Int32" size="4" />
+                <SelectField field="acreage" selected="True" type="FixedDecimal" size="12.2" />
+                <SelectField field="square_feet" selected="True" type="Int32" size="4" />
+                <SelectField field="current_improvement_value" selected="True" type="Int32" size="4" />
+                <SelectField field="current_land_value" selected="True" type="Int32" size="4" />
+                <SelectField field="current_total_value" selected="True" type="Int32" size="4" />
+                <SelectField field="effective_year" selected="True" type="Date" size="10" />
+                <SelectField field="transfer_date" selected="True" type="Date" size="10" />
+                <SelectField field="ImprovementYear" selected="True" type="Date" size="10" />
+                <SelectField field="consideration" selected="True" type="Int32" size="4" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="21" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="17" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="14" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Join" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="8" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="8" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="11" Connection="Join" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="11" Connection="Left" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>ETL3_FactTable</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="44a2ea84-f1da-43d2-b2a3-46e957947ccb" />
+      <Telemetry>
+        <PreviousWorkflowId value="d024577e-c003-44f7-a14f-0f48ac57ef8d" />
+        <OriginWorkflowId value="d024577e-c003-44f7-a14f-0f48ac57ef8d" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
